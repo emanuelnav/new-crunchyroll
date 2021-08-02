@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/media-queries.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <header class="header">
+        <a href="./index.html"><img class="header__img" src="assets/img/logo-crunchyroll.png" alt="Logo"></a>
+    </header>
+    <section class="login">
+        <div class="login__container">
+            <h2 tabindex="0">Sign In</h2>
+            <form class="login__container--form">
+                <input  aria-label="Email" class="input-login" type="email" placeholder="E-mail">
+                <input aria-label="Password" class="input-login" type="password" placeholder="Password">
+                <button class="button-login">Sign In</button>
+                <div class="login__container--remember">
+                    <label>
+                        <input type="checkbox" id="cbox" value="checkbox"> Remember Me
+                    </label>
+                    <a href="#">I forgot my password</a>        
+                </div>
+            </form>
+            <section class="login__container--socialmedia">
+                <div><img src="https://img.icons8.com/fluent/48/000000/google-logo.png" alt="Google">Log in with Google</div>
+                <div><img src="https://img.icons8.com/fluent/48/000000/facebook.png" alt="Google">Log in with Facebook</div>
+            </section>
+            <p class="login__container--register">Dont have an account? <a href="./register.html">Sign Up</a></p>
+        </div>
+    </section>
+    <footer class="footer">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help Center</a>
+    </footer>
+</body>
+</html>

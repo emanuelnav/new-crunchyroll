@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B1A17;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img {
+    width: 250px;
+    margin: 20px 0px 0px 10px;
+}
+
+.header__menu {
+    margin-right: 20px;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin-left: -15px;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    align-items: center;
+    display: flex;
+    margin-right: 8px;
+}
+
+.header__menu--profile img {
+    margin-right: 10px;
+    width: 40px;
+}
+
+.search {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    height: 50px;
+    margin-top: 10px;
+    outline: none;
+    padding: 0px 20px;
+    width: 50%;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.categories__title {
+    padding-left: 20px;
+    position: absolute;
+    width: 100%;
+}
+.carousel {
+    margin-bottom: 50px;
+    overflow-x: scroll;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel__container {
+    margin: 50px 0px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 400px;
+    margin-right: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    transform-origin: center left;
+    width: 300px;
+}
+
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.carousel-item__img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    bottom: 0;
+    font-size: 10px;
+    left: 0;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 450ms opacity;
+}
+
+.carousel-item:hover .carousel-item__details{
+    opacity: 1;
+}
+
+.carousel-item__details img{
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-item__details--title {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+.carousel::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;   
+    background:rgba(255,255,255,.4);
+    border-radius: 4px;
+}
+.carousel::-webkit-scrollbar:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.carousel::-webkit-scrollbar:hover:active {
+    background: #999;
+}
+
+/* LOG IN Page CSS style */
+
+.login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px);
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    border-radius: 30px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 50px;
+    width: 500px;
+}
+
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-login {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #767676;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 60px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px 0px;
+}
+
+.button-login {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;   
+    margin: 10px 0px;
+}
+
+.button-login:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.login__container--remember {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.login__container--remember a{
+    color: white;
+    text-decoration: none;
+}
+
+.login__container--remember a:hover{
+    text-decoration: underline;
+}
+
+.login__container--socialmedia > div {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--socialmedia div img{
+    margin-right: 10px;
+    width: 32px;
+}
+
+.login__container--register {
+    font-size: 14px;
+    text-align: center;
+}
+
+.login__container--register a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+
+.footer a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
